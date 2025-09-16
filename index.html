@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Priya Sisodia — Software Engineer</title>
+	<meta name="description"
+		content="Portfolio of Priya Sisodia — SWE with experience in Python/Java/C++, AWS, CI/CD, and systems projects." />
+	<link rel="canonical" href="https://priyaa-18.github.io/" />
+	<meta property="og:title" content="Priya Sisodia — Software Engineer" />
+	<meta property="og:description" content="Projects, resume, and contact info." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://priyaa-18.github.io/" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+	<header class="container header">
+		<a class="brand" href="/">PS</a>
+		<nav class="nav">
+			<a href="#projects">Projects</a>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+			<button id="theme-toggle" aria-label="Toggle theme">🌓</button>
+		</nav>
+	</header>
+
+	<main class="container">
+		<section class="hero">
+			<h1>Hi, I'm <span class="accent">Priya Sisodia</span>.</h1>
+			<p class="lead">
+				SWE with experience in Python, Java, C++, REST APIs, Docker, AWS, CI/CD, and testing.
+				I like systems-y work — distributed caching, storage/IO, and performance.
+			</p>
+			<div class="cta">
+				<a class="btn" href="assets/resume.pdf">Download Resume (PDF)</a>
+				<a class="btn ghost" href="#projects">See Projects</a>
+			</div>
+		</section>
+
+		<section id="projects" class="section">
+			<h2>Featured Projects</h2>
+			<div class="grid">
+				<article class="card">
+					<h3>Distributed Cache System</h3>
+					<p>
+						Consistent hashing, replication, TTL, REST nodes, and a smart client.
+						Focused on fault tolerance and load distribution; measured throughput and latency.
+					</p>
+					<ul class="bullets">
+						<li>Python • REST • Consistent hashing</li>
+						<li>Thread-safe in-memory store, TTL</li>
+						<li>Replication and graceful failover demos</li>
+					</ul>
+					<!-- Replace '#' with your repo link when ready -->
+					<a class="link" href="#" aria-label="Distributed Cache repo">View repo →</a>
+				</article>
+
+				<article class="card">
+					<h3>Drone Delivery System (Simulation)</h3>
+					<p>
+						C++ logistics sim with multi-agent coordination (drones, humans, packages),
+						Factory/Singleton patterns, Dijkstra routing, and smart battery scheduling.
+					</p>
+					<ul class="bullets">
+						<li>C++ • Google Test • Docker</li>
+						<li>Dynamic scheduling, uptime improvements</li>
+						<li>Team project across 6 sprints</li>
+					</ul>
+					<a class="link" href="https://hub.docker.com/r/sisod008/drone_sim">Docker image →</a>
+				</article>
+			</div>
+		</section>
+
+		<section id="about" class="section">
+			<h2>About</h2>
+			<p>
+				B.S. Computer Science @ University of Minnesota (GPA 3.7).
+				Interned at IDeaS and KEB; CS Teaching Assistant since 2023.
+				Comfortable across Python/Java/C++, REST APIs, SQL/MongoDB, Docker, AWS, GitHub Actions, and testing
+				(JUnit/gtest).
+			</p>
+			<p>
+				I enjoy building reliable systems and documenting tradeoffs.
+				This site is a living portfolio — I ship small improvements weekly.
+			</p>
+		</section>
+
+		<section id="contact" class="section">
+			<h2>Contact</h2>
+			<ul class="links">
+				<li><a href="mailto:sisodiapriya1619@gmail.com">sisodiapriya1619@gmail.com</a></li>
+				<li><a href="https://www.linkedin.com/in/sisodia-priya">LinkedIn</a></li>
+				<li><a href="https://github.com/Priyaa-18">GitHub</a></li>
+				<li><a href="https://hub.docker.com/r/sisod008/drone_sim">Docker Hub</a></li>
+			</ul>
+		</section>
+	</main>
+
+	<footer class="container footer">
+		<small>© <span id="year"></span> Priya Sisodia</small>
+	</footer>
+
+	<script>
+		// year
+		document.getElementById('year').textContent = new Date().getFullYear();
+		// theme toggle
+		const root = document.documentElement;
+		const btn = document.getElementById('theme-toggle');
+		const saved = localStorage.getItem('theme');
+		if (saved) root.dataset.theme = saved;
+		btn.addEventListener('click', () => {
+			const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+			root.dataset.theme = next;
+			localStorage.setItem('theme', next);
+		});
+	</script>
+</body>
+
+</html>
