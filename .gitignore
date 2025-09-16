@@ -1,0 +1,14 @@
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# system files
+Icon?
+Thumbs.db
+ehthumbs.db
+
+# node/python/etc
+node_modules/
+__pycache__/
+.env
