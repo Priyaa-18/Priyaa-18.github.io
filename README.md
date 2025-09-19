@@ -1,5 +1,22 @@
-# Priya Sisodia — Portfolio
+# Portfolio Website
 
-This repository contains the source code for my personal portfolio website, built with **HTML, CSS, and JavaScript** and deployed via **GitHub Pages**.
+Personal portfolio showcasing my software engineering projects, experience, technical skills, and more...
 
-**Live Site:** [priyaa-18.github.io](https://priyaa-18.github.io)
+🔗 **Live Site:** https://priyaa-18.github.io
+
+## Tech Stack
+- HTML, CSS, JavaScript
+- Responsive design with dark/light mode
+- GitHub Pages deployment
+
+## Features
+- Project showcase with GitHub/Docker links
+- Interactive experience timeline
+- Downloadable resume
+- Social links integration
+
+## Local Development
+```bash
+git clone https://github.com/Priyaa-18/Priyaa-18.github.io.git
+cd Priyaa-18.github.io
+open index.html
