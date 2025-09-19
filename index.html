@@ -21,6 +21,7 @@
 		<nav class="nav">
 			<a href="#about">About</a>
 			<a href="#projects">Projects</a>
+			<a href="#experience">Experience</a>
 			<a href="#contact">Contact</a>
 			<button id="theme-toggle" aria-label="Toggle theme">🌓</button>
 		</nav>
@@ -39,7 +40,7 @@
 		</section>
 
 		<section id="projects" class="section">
-			<h2>Featured Projects</h2>
+			<h2>Projects</h2>
 			<div class="grid">
 				<article class="card">
 					<h3>Distributed Cache System</h3>
@@ -70,6 +71,52 @@
 					<a class="link" href="https://hub.docker.com/r/sisod008/drone_sim">Docker image →</a>
 				</article>
 			</div>
+		</section>
+
+		<section id="experience" class="section">
+			<h2>Relevant Experiences</h2>
+
+			<article class="card experience-card">
+				<h3>Test Engineering Intern, IDeaS Revenue Solutions</h3>
+				<p><em>May 2025 - Aug 2025</em></p>
+				<p class="summary">
+					Built RESTful APIs and improved CI/CD pipelines, boosting service reliability by 30%.
+				</p>
+				<button class="see-more" onclick="toggleDetails(this)">See More</button>
+				<ul class="details bullets">
+					<li>Integrated SQL/MongoDB validations and Datadog telemetry for 7+ AWS-hosted microservices.</li>
+					<li>Resolved 20+ production issues through root-cause analysis and regression testing.</li>
+					<li>Enhanced CI/CD pipelines via GitHub Actions and Terraform, added dashboards with Datadog & AWS
+						CloudWatch.</li>
+				</ul>
+			</article>
+
+			<article class="card experience-card">
+				<h3>Software Design Engineer Intern, KEB America, Inc.</h3>
+				<p><em>May 2024 - Aug 2024</em></p>
+				<p class="summary">
+					Refactored legacy Python code and expanded automated test coverage by 40%.
+				</p>
+				<button class="see-more" onclick="toggleDetails(this)">See More</button>
+				<ul class="details bullets">
+					<li>Refactored 1,500+ lines of Python 2.0 code to modular Python 3.12 for maintainability.</li>
+					<li>Designed black-box and integration test suites in Python and C#.</li>
+					<li>Resolved 50+ tickets across the development lifecycle with cross-functional teams.</li>
+				</ul>
+			</article>
+
+			<article class="card experience-card">
+				<h3>Computer Science Teaching Assistant, UMN</h3>
+				<p><em>Sep 2023 - Present</em></p>
+				<p class="summary">
+					Supported 100+ students each semester in Python, Java, and computational linear algebra.
+				</p>
+				<button class="see-more" onclick="toggleDetails(this)">See More</button>
+				<ul class="details bullets">
+					<li>Designed exercises and automated 600+ grading tasks using Gradescope and Bash.</li>
+					<li>Provided one-on-one lab support, improving confidence and academic performance.</li>
+				</ul>
+			</article>
 		</section>
 
 		<section id="about" class="section">
@@ -128,6 +175,22 @@
 			localStorage.setItem('theme', next);
 		});
 	</script>
+
+	<script>
+		function toggleDetails(button) {
+			const details = button.nextElementSibling;
+			const isOpen = details.style.display === "block";
+
+			if (isOpen) {
+				details.style.display = "none";
+				button.textContent = "See More";
+			} else {
+				details.style.display = "block";
+				button.textContent = "See Less";
+			}
+		}
+	</script>
+
 </body>
 
 </html>

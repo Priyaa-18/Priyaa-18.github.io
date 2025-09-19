@@ -1,3 +1,6 @@
+/* ------------------------------
+   THEME VARIABLES
+------------------------------ */
 :root {
 	--bg: #0b0b0c;
 	--fg: #e9eaec;
@@ -16,6 +19,9 @@
 	--border: #e6e8ee;
 }
 
+/* ------------------------------
+	 BASE RESETS
+  ------------------------------ */
 * {
 	box-sizing: border-box;
 }
@@ -33,6 +39,24 @@ body {
 	line-height: 1.6;
 }
 
+/* ------------------------------
+	 TYPOGRAPHY
+  ------------------------------ */
+h1 {
+	margin: 0 0 0.5rem;
+	font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+h2 {
+	margin-top: 2rem;
+	font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+h3 {
+	margin: 0 0 0.25rem;
+	font-size: 1.05rem;
+}
+
 a {
 	color: var(--accent);
 	text-decoration: none;
@@ -42,12 +66,39 @@ a:hover {
 	text-decoration: underline;
 }
 
+.lead {
+	color: var(--muted);
+	max-width: 70ch;
+}
+
+.accent {
+	color: var(--accent);
+}
+
+/* ------------------------------
+	 LAYOUT
+  ------------------------------ */
 .container {
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 1.25rem;
 }
 
+.section {
+	margin-top: 1.75rem;
+}
+
+.grid {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ------------------------------
+	 COMPONENTS
+  ------------------------------ */
+
+/* Header + Nav */
 .header,
 .footer {
 	display: flex;
@@ -83,32 +134,9 @@ a:hover {
 	cursor: pointer;
 }
 
+/* Hero section */
 .hero {
 	padding: 2.5rem 0 1rem;
-}
-
-h1 {
-	margin: 0 0 0.5rem;
-	font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-}
-
-h2 {
-	margin-top: 2rem;
-	font-size: clamp(1.3rem, 2.5vw, 1.8rem);
-}
-
-h3 {
-	margin: 0 0 0.25rem;
-	font-size: 1.05rem;
-}
-
-.lead {
-	color: var(--muted);
-	max-width: 70ch;
-}
-
-.accent {
-	color: var(--accent);
 }
 
 .cta {
@@ -133,23 +161,23 @@ h3 {
 	border: 1px solid var(--border);
 }
 
-.section {
-	margin-top: 1.75rem;
-}
-
-.grid {
-	display: grid;
-	gap: 1rem;
-	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
+/* Card (Projects + Experience unified) */
 .card {
 	background: var(--card);
 	border: 1px solid var(--border);
-	border-radius: 14px;
+	border-radius: 12px;
 	padding: 1rem;
+	margin-bottom: 1.25rem;
+	transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
+.card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+	border-color: var(--accent);
+}
+
+/* Lists */
 .bullets {
 	margin: 0.5rem 0 0;
 	padding-left: 1.1rem;
@@ -159,16 +187,6 @@ h3 {
 	list-style: none;
 	padding: 0;
 	margin: 0.5rem 0 0;
-}
-
-.links li {
-	margin: 0.25rem 0;
-}
-
-.footer {
-	margin-top: 2rem;
-	padding-top: 1rem;
-	border-top: 1px solid var(--border);
 }
 
 .links li {
@@ -183,6 +201,7 @@ h3 {
 	color: var(--accent);
 }
 
+/* Social Icons */
 .social-heading {
 	text-align: center;
 	margin-bottom: 1rem;
@@ -204,22 +223,17 @@ h3 {
 	transform: scale(1.2);
 }
 
-/* Font Awesome icons */
 .social-icons i {
 	font-size: 2rem;
 }
 
-/* SVG mail icon sizing */
-.social-icon-img {
-	width: 36px;
-	height: 36px;
-}
-
+.social-icon-img,
 .github-icon {
 	width: 36px;
 	height: 36px;
 }
 
+/* Light/Dark GitHub icons */
 .dark-only {
 	display: inline;
 }
@@ -234,4 +248,39 @@ h3 {
 
 :root[data-theme="light"] .light-only {
 	display: inline;
+}
+
+/* ------------------------------
+	 EXPERIENCE SECTION
+  ------------------------------ */
+.summary {
+	margin-bottom: 0.5rem;
+}
+
+.see-more {
+	background: transparent;
+	border: none;
+	color: var(--accent);
+	font-weight: 600;
+	cursor: pointer;
+	margin-bottom: 0.5rem;
+	padding: 0;
+}
+
+.see-more:hover {
+	text-decoration: underline;
+}
+
+.details {
+	display: none;
+	margin-top: 0.5rem;
+}
+
+/* ------------------------------
+	 FOOTER
+  ------------------------------ */
+.footer {
+	margin-top: 2rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--border);
 }
