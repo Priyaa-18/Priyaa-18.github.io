@@ -182,3 +182,56 @@ h3 {
 	font-size: 1.1rem;
 	color: var(--accent);
 }
+
+.social-heading {
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+.social-icons {
+	display: flex;
+	justify-content: center;
+	gap: 1.5rem;
+	margin-top: 1rem;
+}
+
+.social-icons a {
+	text-decoration: none;
+	transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+	transform: scale(1.2);
+}
+
+/* Font Awesome icons */
+.social-icons i {
+	font-size: 2rem;
+}
+
+/* SVG mail icon sizing */
+.social-icon-img {
+	width: 36px;
+	height: 36px;
+}
+
+.github-icon {
+	width: 36px;
+	height: 36px;
+}
+
+.dark-only {
+	display: inline;
+}
+
+.light-only {
+	display: none;
+}
+
+:root[data-theme="light"] .dark-only {
+	display: none;
+}
+
+:root[data-theme="light"] .light-only {
+	display: inline;
+}
