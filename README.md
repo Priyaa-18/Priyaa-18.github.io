@@ -5,7 +5,7 @@ Personal portfolio showcasing my software engineering projects, experience, tech
 🔗 **Live Site:** https://priyaa-18.github.io
 
 ## Tech Stack
-- HTML, CSS, JavaScript
+- HTML, CSS
 - Responsive design with dark/light mode
 - GitHub Pages deployment
 
