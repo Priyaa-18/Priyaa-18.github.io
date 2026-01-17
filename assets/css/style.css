@@ -277,6 +277,23 @@ a:hover {
 }
 
 /* ------------------------------
+	 CERTIFICATE SECTION
+  ------------------------------ */
+.cert-card {
+	text-align: center;
+}
+
+.cert-card .credly-badge {
+	display: flex;
+	justify-content: center;
+	margin: 12px 0;
+}
+
+.cert-card .btn {
+	margin-top: 10px;
+}
+
+/* ------------------------------
 	 FOOTER
   ------------------------------ */
 .footer {
